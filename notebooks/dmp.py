@@ -138,7 +138,7 @@ def trajectory(dmp, w, x0, g, tau, dt, o=None, shape=True, avoidance=False,
         
         C = dmp.obstacle(o[0:2], x[0:2], xd[0:2]) if avoidance else 0.0
         if avoidance:
-            xdd = sd + 1*np.asarray([C[0],C[1],0]) #+ f
+            xdd = sd + 3*np.asarray([C[0],C[1],0]) #+ f
         else:
             xdd = sd + 2*C
 
